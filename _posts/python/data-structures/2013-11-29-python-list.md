@@ -2,6 +2,7 @@
 layout: page
 title: Python list
 tagline: [python] 
+group: python
 ---
 {% include JB/setup %}
 
@@ -71,12 +72,16 @@ tagline: [python]
 
 3、运算
 
-- 同一类型的序列可进行相加
+- add
+	
+	同一类型的序列可进行相加
 
 		[1, 2, 3] + [4, 5, 6]
 		[1, 2, 3] + 'hello'//TypeError
 
-- 乘法=重复次数
+- multiply
+
+	乘法=重复次数
 
     在列表的运算中，乘法将使元素重复相应的次数
 
@@ -119,17 +124,17 @@ tagline: [python]
 	
 	当然如果再转回来可以`''.join(['a','b',c])`
 
-- 修改元素
+- modify
 
 		x = [1, 2, 3]
 	    x[1] = 1
 
-- 删除元素
+- delete
 
 		x = [1, 2, 3]
 		del x[1]
 
-- 分片赋值
+- split
 
 		a = [1, 2, 3, 4]
 		a[2:]=list('hello') //[1, 2, 'h', 'e', 'l', 'l', 'o']
