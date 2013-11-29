@@ -1,7 +1,7 @@
 ---
 layout: page
-title: python list
-tagline: 
+title: Python list
+tagline: [python] 
 ---
 {% include JB/setup %}
 
