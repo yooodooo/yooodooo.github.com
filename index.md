@@ -2,9 +2,10 @@
 layout: page
 title: Somewhere I Belong
 ---
+
 {% include JB/setup %}
 
-{% assign posts_collate = site.posts %}
+{% assign posts_collate = site.posts %}  
 {% include JB/posts_collate %}
 
 
