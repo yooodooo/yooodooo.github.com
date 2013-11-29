@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hello World!
+title: 七号江湖
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
