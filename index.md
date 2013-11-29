@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 七号江湖
-tagline: [{{coder:'j2ee,python,android'}}]
+tagline: [somewhere i belong]
 ---
 {% include JB/setup %}
 
