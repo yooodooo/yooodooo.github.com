@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Hello world
 tagline: [java] 
 group: java
