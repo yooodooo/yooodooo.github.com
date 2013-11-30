@@ -6,6 +6,6 @@ title: Somewhere I Belong
 
 <ul class="posts">
   {% for post in site.posts %}
-    <li><span>[{{ post.group }}]--{{ post.date.strftime('%Y-%m-%d') }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+    <li>[{{ post.group }}]<a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a><span>&raquo; {{ post.date | date_to_string }}</span> </li>
   {% endfor %}
 </ul>
