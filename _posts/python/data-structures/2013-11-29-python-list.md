@@ -2,7 +2,7 @@
 layout: post
 title: Python list
 tagline: [python] 
-group: python
+group: Python
 ---
 {% include JB/setup %}
 
