@@ -96,7 +96,7 @@ group: Python
 		'h' in 'hello' //--->True
 		[1, 2] in [[1, 2], [2, 1]] //--->True
 
-- 特性
+- max
 
 	`len`,`max`,`min`分别是序列的长度、序列中元素的最大值、最小值
 
