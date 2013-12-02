@@ -1,14 +1,12 @@
 ---
 layout: post
-title: redis set sample
+title: redis commands
 tagline: [redis] 
 group: redis
 ---
 {% include JB/setup %}
 
-hello 
-
-
+<div class="well">主要是一些常用的redis命令讲解,来源于[主页](http://redis.io/commands)<div>
 
 <div class="tabbable">
 
