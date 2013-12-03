@@ -8,6 +8,7 @@ group: redis
 
 <div class="well">主要是一些常用的redis命令讲解,来源于<a href="http://redis.io/commands">主页</a></div>
 
+
 <div class="tabbable">
 
   <ul class="nav nav-tabs">
@@ -19,14 +20,17 @@ group: redis
   
   <div class="tab-content">
   
-    <div class="tab-pane active" id="command_strings">
-	
-	<ul>
-	  <li>`set key value` 如果key存在那么将会覆盖。如果成功返回OK。在2.6.12后新增了`SET key value [EX seconds] [PX milliseconds] [NX|XX]`</li>
-	</ul>
-	
+	<div class="tab-pane active" id="command_strings">
 
-    </div>
+	<li> <code>set key value</code> 如果key存在那么将会覆盖。如果成功返回OK。在2.6.12后新增了<code>SET key value [EX seconds] [PX milliseconds] [NX|XX]</code> </li>
+	<li> <code>set key value</code> 如果key存在那么将会覆盖。如果成功返回OK。在2.6.12后新增了<code>SET key value [EX seconds] [PX milliseconds] [NX|XX]</code> </li>
+	<li> <code>set key value</code> 如果key存在那么将会覆盖。如果成功返回OK。在2.6.12后新增了<code>SET key value [EX seconds] [PX milliseconds] [NX|XX]</code> </li>
+	<li> <code>set key value</code> 如果key存在那么将会覆盖。如果成功返回OK。在2.6.12后新增了<code>SET key value [EX seconds] [PX milliseconds] [NX|XX]</code> </li>
+	<li> <code>set key value</code> 如果key存在那么将会覆盖。如果成功返回OK。在2.6.12后新增了<code>SET key value [EX seconds] [PX milliseconds] [NX|XX]</code> </li>
+	<li> <code>set key value</code> 如果key存在那么将会覆盖。如果成功返回OK。在2.6.12后新增了<code>SET key value [EX seconds] [PX milliseconds] [NX|XX]</code> </li>
+
+
+	</div>
 	
     <div class="tab-pane" id="command_hashes">
       <p>hashes commands</p>
