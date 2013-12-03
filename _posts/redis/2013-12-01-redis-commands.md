@@ -20,7 +20,23 @@ group: redis
   <div class="tab-content">
   
     <div class="tab-pane active" id="command_strings">
-      <p>string commands here</p>
+		<table>
+
+			<tr>
+			<td>SET key value</td>
+			<td>O(1)</td>
+			<td>对key设置value，如果key存在会覆盖原有值</td>
+			<td>返回OK</td>
+			</tr>
+
+
+
+
+
+
+
+
+		</table>
     </div>
 	
     <div class="tab-pane" id="command_hashes">
