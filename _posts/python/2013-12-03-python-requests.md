@@ -21,10 +21,15 @@ group: python
 
 用Requests来创建一个HTTP请求很简单
 
-	>>> import requests
-	>>> r = requests.get('https://www.google.com/search?q=python')
+	import requests
+	r = requests.get('https://www.google.com/search?q=python')
 
-这里创建了一个get请求，同时返回了一个`Response`对象.当然对于其他的HTTP请求类型也同样支持：
+这里创建了一个get请求，同时返回了一个`Response`对象.当然也可以传递参数的方式发送请求
+
+	queryparams = {'q':'python'}
+	r = requests.get('https://www.google.com/search', params=queryparams)
+
+当然对于其他的HTTP请求类型也同样支持：
 
 	r = requests.post('https://www.somesite.com/post')
 	r = requests.put('https://www.somesite.com/put')
@@ -32,6 +37,6 @@ group: python
 	r = requests.head('https://www.somesite.com/head')
 	r = requests.options('https://www.somesite.com/options')
 
-
+## Response ##
 
  
