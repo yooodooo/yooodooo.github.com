@@ -6,7 +6,7 @@ group: redis
 ---
 {% include JB/setup %}
 
-<div class="well">主要是一些常用的redis命令讲解,来源于[主页](http://redis.io/commands)<div>
+<div class="well">主要是一些常用的redis命令讲解,来源于[主页](http://redis.io/commands)</div>
 
 <div class="tabbable">
 
