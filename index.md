@@ -4,6 +4,8 @@ title: Somewhere I Belong
 ---
 {% include JB/setup %}
 
+{% assign posts_collate = site.posts %}  
+{% include JB/posts_collate %}
 <!--
 <table class="table table-striped">
   {% for post in site.posts %}
@@ -15,6 +17,3 @@ title: Somewhere I Belong
   {% endfor %}
 </table>
 -->
-
-{% assign posts_collate = site.posts %}
-{% include JB/posts_collate %}
