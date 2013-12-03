@@ -21,10 +21,9 @@ group: redis
   
     <div class="tab-pane active" id="command_strings">
 	
-	<dl class="dl-horizontal">
-	  <dt>Set</dt>
-	  <dd>...</dd>
-	</dl>
+	<ul>
+	  <li>`set key value` 如果key存在那么将会覆盖。如果成功返回OK。在2.6.12后新增了`SET key value [EX seconds] [PX milliseconds] [NX|XX]`</li>
+	</ul>
 	
 
     </div>
