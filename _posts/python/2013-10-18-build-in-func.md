@@ -9,7 +9,7 @@ group: Python
 python提供了大量内置的函数，对这样常用的函数我进行了简单的分类，主要包括以下几类：
 
 ## 集合类 ##
-<table>
+<table  class="table table-striped table-bordered">
 <tbody>
 <tr><td>dict(**kwarg)</td><td>创建一个字典</td></tr>
 <tr><td>list([iterable])</td><td>一个可变序列</td></tr>
@@ -21,7 +21,7 @@ python提供了大量内置的函数，对这样常用的函数我进行了简�
 
 
 ## 数字、计算、进制 ##
-<table>
+<table  class="table table-striped table-bordered">
 <tbody>
 <tr><td>abs(x)</td><td>返回数字的绝对值，数字可以是int,float如果是复数返回模</td></tr>
 <tr><td>bin()</td><td>返回一个integer的二进制字符串</td></tr>
@@ -50,7 +50,7 @@ python提供了大量内置的函数，对这样常用的函数我进行了简�
 
 
 ## 对象属性 ##
-<table>
+<table  class="table table-striped table-bordered">
 <tbody>
 <tr><td>classmethod(function)</td><td>创建</td></tr>
 <tr><td>delattr()</td><td>一个</td></tr>
@@ -66,7 +66,7 @@ python提供了大量内置的函数，对这样常用的函数我进行了简�
 
 
 ## 文件目录 ##
-<table>
+<table  class="table table-striped table-bordered">
 <tbody>
 <tr><td>dict(**kwarg)</td><td>创建一个字典</td></tr>
 <tr><td>list([iterable])</td><td>一个可变序列</td></tr>
