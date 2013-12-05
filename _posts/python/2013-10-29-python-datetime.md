@@ -133,7 +133,7 @@ datetime中常用方法和属性
 
 日期格式
 
-<table>
+<table  class="table table-striped table-bordered">
 <tr><td>%a</td><td>	星期的简写。如 星期三为Web</td></tr>
 <tr><td>%A</td><td>星期的全写。如 星期三为Wednesday</td></tr>
 <tr><td>%b</td><td>	月份的简写。如4月份为Apr</td></tr>
