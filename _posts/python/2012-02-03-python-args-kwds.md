@@ -6,8 +6,8 @@ group: Python
 ---
 {% include JB/setup %}
 
-以前在用到mechanize和调用win32接口时遇到大量签名为*args, **kwds的方法，如：
-mechanize的模块_form.py中有如下代码：
+以前在用到mechanize和调用win32接口时遇到大量签名为`*args, **kwds`的方法，如：
+mechanize的模块`_form.py`中有如下代码：
 
 	def ParseString(text, base_uri, *args, **kwds):  
 		fh = StringIO(text)  
@@ -30,7 +30,7 @@ mechanize的模块_form.py中有如下代码：
 
 	public void foo(String ...name){}  
 	
-其中*args是一个可变长度的list，而**kwds为可变长度的字典。当然既然都是可变的，这两个作为方法签名也可以没有。虽然如此，在使用过程中遇到了不少问题，特将做的一些测试记录下来。
+其中`*args`是一个可变长度的list，而`**kwds`为可变长度的字典。当然既然都是可变的，这两个作为方法签名也可以没有。虽然如此，在使用过程中遇到了不少问题，特将做的一些测试记录下来。
 为了模拟上面的调用，定义了两个方法：
 
 	def foo(name, *args, **kwds):  
@@ -80,7 +80,7 @@ mechanize的模块_form.py中有如下代码：
 	bar(name, *args, **kwds)  
 	def bar(name, age, address,a="aaa", b="bbb"):  
  
-这里有签名age、address对应*args。a,b对应**kwds。也就是说list长度只能为2，dict的长度也只能为2。
+这里有签名`age、address`对应`*args`。`a,b`对应`**kwds`。也就是说list长度只能为2，dict的长度也只能为2。
 
 	foo("nico", "10", a="aaaaaaaaa", b="vvvvvvvvvvvvv")   
 	foo("nico", "10", "chengdu", a="aaaaaaaaa", b="vvvvvvvvvvvvv", c="aa")  
