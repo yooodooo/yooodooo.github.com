@@ -6,7 +6,6 @@ group: Python
 ---
 {% include JB/setup %}
 
-# 日期和时间 #
 在python中处理日期和时间主要有三个模块: `datetime,calendar,time`针对了不同的使用场景
 
 
