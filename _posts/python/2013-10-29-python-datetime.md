@@ -6,14 +6,13 @@ group: Python
 ---
 {% include JB/setup %}
 
-# 日期和时间 #
 在python中处理日期和时间主要有三个模块: `datetime,calendar,time`针对了不同的使用场景
 
 
 ## datetime ##
 datetime模块提供了处理大部分情况下日期、时间的解决方案。比如日期、时间、时间间隔、时区等。主要包括下面的类
 
-<table>
+<table class="table table-striped table-bordered">
 <tr><td>datetime.date</td><td>提供基于Gregorian日历下year,month,day的处理方案</td></tr>
 <tr><td>datetime.time</td><td>时间理想化的处理(考虑一天是24*60*60的情况，没有闰秒),提供属性hour,minute,second,microsecond,和tzinfo</td></tr>
 <tr><td>datetime.datetime</td><td>日期和时间的集合(包括date和time)</td></tr>
@@ -133,7 +132,7 @@ datetime中常用方法和属性
 
 日期格式
 
-<table>
+<table  class="table table-striped table-bordered">
 <tr><td>%a</td><td>	星期的简写。如 星期三为Web</td></tr>
 <tr><td>%A</td><td>星期的全写。如 星期三为Wednesday</td></tr>
 <tr><td>%b</td><td>	月份的简写。如4月份为Apr</td></tr>
