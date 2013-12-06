@@ -27,6 +27,10 @@ author :
 #
 production_url : http://yooodooo.github.io
 
+markdown: redcarpet
+redcarpet:
+    extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
