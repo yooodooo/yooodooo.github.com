@@ -64,3 +64,30 @@ group: python
 <tr><td>text</td><td>用unicode返回响应的内容,可通过<code>r.encoding</code>设置编码</td></tr>
 <tr><td>json(**kwargs)</td><td>json格式返回</td></tr>
 </table>
+
+## 再看Request ##
+
+从前面知道提供了`get,post,put`等7个方法。其实这些都依赖于一个入口`requests.request(method, url, **kwargs)`来看看一个方法：
+
+	def get(url, **kwargs):
+	    kwargs.setdefault('allow_redirects', True)
+	    return request('get', url, **kwargs)
+
+而在主要的入口方法`request(method, url, **kwargs)`中有如下的参数：
+
+<table class="table table-striped table-bordered">
+<tr><td>method</td><td>必选</td><td>HTTP方法,<code>get,post,put,delete</code></td></tr>
+<tr><td>url</td><td>必选</td><td>当前请求的URL</td></tr>
+<tr><td>params</td><td>可选</td><td>当前请求的查询参数(get),字典或byte格式</td></tr>
+<tr><td>data</td><td>可选</td><td>Form表单的请求参数(post),可以是字典、byte或文件</td></tr>
+<tr><td>headers</td><td>可选</td><td>请求的headers</td></tr>
+<tr><td>cookies</td><td>可选</td><td>请求的cookies</td></tr>
+<tr><td>files</td><td>可选</td><td>迭代原生的相应数据，见上例</td></tr>
+<tr><td>auth</td><td>可选</td><td>Auth tuple to enable Basic/Digest/Custom HTTP Auth</td></tr>
+<tr><td>timeout</td><td>可选</td><td>超时设置</td></tr>
+<tr><td>allow_redirects</td><td>可选</td><td>Boolean. Set to True if POST/PUT/DELETE redirect following is allowed</td></tr>
+<tr><td>proxies</td><td>可选</td><td>Dictionary mapping protocol to the URL of the proxy</td></tr>
+<tr><td>verify</td><td>可选</td><td> if True, the SSL cert will be verified. A CA_BUNDLE path can also be provided</td></tr>
+<tr><td>stream</td><td>可选</td><td>if False, the response content will be immediately downloaded</td></tr>
+<tr><td>cert</td><td>可选</td><td>if String, path to ssl client cert file (.pem). If Tuple, (‘cert’, ‘key’) pair</td></tr>
+</table>
