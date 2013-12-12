@@ -11,63 +11,73 @@ group: thrift
 ## 一、编写idl描述性 ##
 thrift采用`IDL（Interface Definition Language）`来定义通用的服务接口，并通过生成不同的语言代理实现来达到跨语言、平台的功能。在thrift的IDL中，我们需要关注一下几点：
 
-1. <strong>基本类型</strong>与java中的`char，int，long`等基本类型一样，IDL中也有用来描述基本类型的定义
+1. <strong>基本类型</strong>
 
-	- bool 表示一个布尔值，取true或false
-	- byte 表示一个带符号的字节
-	- i16 表示一个带符号的16位整形
-	- i32 表示一个带符号的32位整形
-	- i64 表示一个带符号的64位整形
-	- double 表示一个带符号的64位整形
-	- string 表示一个不可知编码的文本或二进制串
- 
-2. <strong>结构</strong>定义了一个通用的对象以此来跨语言。主要采用struct来描述。如下我们定义了一个User对象：
+与java中的`char，int，long`等基本类型一样，IDL中也有用来描述基本类型的定义
 
-		struct User {  
-		    1: i16 gender = 1,  
-		    2: string username,  
-		    3: string password,  
-		    4: i32 id  
-		}  
+- bool 表示一个布尔值，取true或false
+- byte 表示一个带符号的字节
+- i16 表示一个带符号的16位整形
+- i32 表示一个带符号的32位整形
+- i64 表示一个带符号的64位整形
+- double 表示一个带符号的64位整形
+- string 表示一个不可知编码的文本或二进制串
+ 
+2. <strong>结构</strong>
 
-	上面的结构定义与C语言的结构描述很相同，每个字段都有一个唯一标识：1,2,3,4(处于版本管理的原因，推荐使用上唯一标识)。同时还可以有默认值。可以将结构的fields设置为optional，即如果在没有设置值时将不会序列化
- 
- 
-3. <strong>容器</strong>thrift的容器是强类型容器，能够与常用语言中的容器想对应，并可使用java泛型的方式进行标注。在thrift中提供了三种容器：
+定义了一个通用的对象以此来跨语言。主要采用struct来描述。如下我们定义了一个User对象：
 
-	- `list<type>` 一个有序元素列表。可翻译为`java ArrayList`或STL的`vector`，或者脚本语言中的原生数组，可包含重复数据
-	- `set<type>` 一个无序不重复元素集。与STL的`set`，java的`HashSet`，Python的`set`，或者PHP/Ruby中的原生`dictionary`
-	- `map<type1,type2>` 一个主键唯一键值映射表，翻译为STL的`map`，java `HashMap`，Python `dictionary`
- 
-4. <strong>异常</strong>与结构的声明一致，唯一不同的是用`exception`关键字
+	struct User {  
+	    1: i16 gender = 1,  
+	    2: string username,  
+	    3: string password,  
+	    4: i32 id  
+	}  
 
-		exception NotFoundException{  
-		    1:i16 errorType,  
-		    2:string message  
-		}  
+上面的结构定义与C语言的结构描述很相同，每个字段都有一个唯一标识：1,2,3,4(处于版本管理的原因，推荐使用上唯一标识)。同时还可以有默认值。可以将结构的fields设置为optional，即如果在没有设置值时将不会序列化
  
  
-5. <strong>服务</strong>一个服务的定义在语义上相当于面向对象编程中的一个接口。服务的定义如下：
+3. <strong>容器</strong>
+
+thrift的容器是强类型容器，能够与常用语言中的容器想对应，并可使用java泛型的方式进行标注。在thrift中提供了三种容器：
+
+- `list<type>` 一个有序元素列表。可翻译为`java ArrayList`或STL的`vector`，或者脚本语言中的原生数组，可包含重复数据
+- `set<type>` 一个无序不重复元素集。与STL的`set`，java的`HashSet`，Python的`set`，或者PHP/Ruby中的原生`dictionary`
+- `map<type1,type2>` 一个主键唯一键值映射表，翻译为STL的`map`，java `HashMap`，Python `dictionary`
+ 
+4. <strong>异常</strong>
+
+与结构的声明一致，唯一不同的是用`exception`关键字
+
+	exception NotFoundException{  
+	    1:i16 errorType,  
+	    2:string message  
+	}  
+ 
+ 
+5. <strong>服务</strong>
+
+一个服务的定义在语义上相当于面向对象编程中的一个接口。服务的定义如下：
 	
-			service <name> {  
-			  <returntype> <name> (<arguments>)[throws (<exceptions>)]  
-			  ...  
-			}  
+	service <name> {  
+	  <returntype> <name> (<arguments>)[throws (<exceptions>)]  
+	  ...  
+	}  
 	
-	在方法的声明中有一个`oneway`修饰符，表示客户端只会触发一个请求，而不会监听任何响应，oneway的方法必须是void：
+在方法的声明中有一个`oneway`修饰符，表示客户端只会触发一个请求，而不会监听任何响应，oneway的方法必须是void：
 	
-			oneway void zip()  
+	oneway void zip()  
 	
-	一个例子
+一个例子
 	
-			service UserService{  
-			  void saveUser(1:User user),  
-			  User get(1:i32 id) throws (1:NotFoundException nfe)  
-			}  
+	service UserService{  
+	  void saveUser(1:User user),  
+	  User get(1:i32 id) throws (1:NotFoundException nfe)  
+	}  
 	
-	同时service也可以从另外的service继承，需要使用关键字extends，这与java的继承关键字一样：
+同时service也可以从另外的service继承，需要使用关键字extends，这与java的继承关键字一样：
 	
-		service Calculator extends shared.SharedService   
+	service Calculator extends shared.SharedService   
  
 ## 二、其他的说明 ##
 
