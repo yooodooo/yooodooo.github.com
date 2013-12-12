@@ -49,9 +49,7 @@ Thrift的[官网](http://thrift.apache.org/download/)。Thrift是由 Facebook �
 - namespace指明了包结构，这里会生成的java包为`org.java.codelib.thrift.sample`
 - service相当于java中的接口描述，会将Hello生成具体语言的接口
 - add和sayHello声明了两个方法：其中add接收两个参数并返回结果，而sayHello接收string类型的参数，这里的参数类型string、i32等与java中的String、int类似
-利用thrift-0.9.0.exe文件编译成java实现代码：
-
-	thrift-0.9.0.exe --gen java Hello.thrift  
+利用thrift-0.9.0.exe文件编译成java实现代码：`thrift-0.9.0.exe --gen java Hello.thrift`
 	
 这样在目录下生成了gen-java的文件夹，包含了java的实现代码Hello.java
 接下来需要实现Hello.java文件中的Hello.Iface 接口:
