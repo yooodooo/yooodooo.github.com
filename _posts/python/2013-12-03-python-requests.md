@@ -14,10 +14,10 @@ categories: [Python]
 ## 安装 ##
 
 有[多种](http://www.python-requests.org/en/latest/user/install/)方式安装,这里采用`setuptools`
-
+{% highlight python %}
 	git clone git://github.com/kennethreitz/requests.git
 	python setup.py install
-	
+{% highlight python %}	
 ## 快速入门 ##
 
 用Requests来创建一个HTTP请求很简单
