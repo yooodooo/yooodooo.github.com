@@ -4,7 +4,7 @@ title: Spring AOP Overview
 tagline: [spring] 
 group: spring
 ---
-{% include JB/setup %}
+{% include codepiano/setup %}
 
 AOP(Aspect-Oriented Programming)面向方面编程，提到这个概念，我们脑海中就会蹦出一些列的场景：日志记录、安全检查、事务控制等。而在日常
 的工作中，特别是使用spring框架的开发中是必不可少的部分。但很多时候都停留在会使用的阶段，而对其原理也没做系统的研究与记录。这里我将自己学

@@ -4,7 +4,7 @@ title: Thrift idl描述和跨语言的web服务
 tagline: [thrift] 
 group: thrift
 ---
-{% include JB/setup %}
+{% include codepiano/setup %}
 
 从上文的描述我们知道需要两个步骤：
 

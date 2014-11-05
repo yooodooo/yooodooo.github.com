@@ -5,7 +5,7 @@ tagline: [python]
 group: Python
 categories: [Python]
 ---
-{% include JB/setup %}
+{% include codepiano/setup %}
 
 以前在用到mechanize和调用win32接口时遇到大量签名为`*args, **kwds`的方法，如：
 mechanize的模块`_form.py`中有如下代码：

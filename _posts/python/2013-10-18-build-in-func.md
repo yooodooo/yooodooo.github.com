@@ -5,7 +5,7 @@ tagline: [python]
 group: Python
 categories: [Python]
 ---
-{% include JB/setup %}
+{% include codepiano/setup %}
 
 python提供了大量内置的函数，对这样常用的函数我进行了简单的分类，主要包括以下几类：
 

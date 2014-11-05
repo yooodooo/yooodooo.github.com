@@ -4,7 +4,7 @@ title: Thrift入门
 tagline: [thrift] 
 group: thrift
 ---
-{% include JB/setup %}
+{% include codepiano/setup %}
 
 ## 一、什么是thrift ##
 Thrift的[官网](http://thrift.apache.org/download/)。Thrift是由 Facebook 开发的远程服务调用框架 Apache Thrift，它采用接口描述语言定义并创建服务，支持可扩展的跨语言服务开发，所包含的代码生成引擎可以在多种语言中，如`C++, Java, Python, PHP, Ruby, Erlang, Perl, Haskell, C#, Cocoa, Smalltalk`等创建高效的、无缝的服务，其传输数据采用二进制格式，相对 XML 和 JSON 体积更小，对于高并发、大数据量和多语言的环境更有优势

@@ -5,7 +5,7 @@ tagline: [redis]
 group: redis
 categories: [redis]
 ---
-{% include JB/setup %}
+{% include codepiano/setup %}
 
 <div class="well">主要是一些常用的redis命令讲解,来源于<a href="http://redis.io/commands">主页</a></div>
 

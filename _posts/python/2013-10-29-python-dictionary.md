@@ -4,7 +4,7 @@ title: Python dictionary
 tagline: [python] 
 group: Python
 ---
-{% include JB/setup %}
+{% include codepiano/setup %}
 
 ## 1. 创建字典 ##
 

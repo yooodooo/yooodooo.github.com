@@ -5,7 +5,7 @@ tagline: [python]
 group: Python
 categories: [Python]
 ---
-{% include JB/setup %}
+{% include codepiano/setup %}
 
 pyExcelerator
 

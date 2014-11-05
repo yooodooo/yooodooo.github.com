@@ -4,7 +4,7 @@ title: Python 日期和时间
 tagline: [python] 
 group: Python
 ---
-{% include JB/setup %}
+{% include codepiano/setup %}
 
 在python中处理日期和时间主要有三个模块: `datetime,calendar,time`针对了不同的使用场景
 

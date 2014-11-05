@@ -4,7 +4,7 @@ title: Python 模块与导入
 tagline: [python] 
 group: Python
 ---
-{% include JB/setup %}
+{% include codepiano/setup %}
 
 ## 模块与导入 ##
 

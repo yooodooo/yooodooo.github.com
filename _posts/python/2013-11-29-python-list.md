@@ -4,7 +4,7 @@ title: Python list
 tagline: [python] 
 group: Python
 ---
-{% include JB/setup %}
+{% include codepiano/setup %}
 
 ## 序列 ##
 序列是python中基本的数据结构，序列中的每个元素被分配了一个序号即元素的位置，也即索引，下表从0开始。如下面是一个序列
