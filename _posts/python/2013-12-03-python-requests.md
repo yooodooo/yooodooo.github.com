@@ -3,8 +3,9 @@ layout: post
 title: python requests
 tagline: [python] 
 group: python
+categories: [Python]
 ---
-{% include JB/setup %}
+{% include codepiano/setup %}
 
 ## 说明 ##
 
