@@ -15,10 +15,8 @@ categories: [Python]
 
 有[多种](http://www.python-requests.org/en/latest/user/install/)方式安装,这里采用`setuptools`
 
-{% highlight python %}
     git clone git://github.com/kennethreitz/requests.git
     python setup.py install
-{% endhighlight %}
 
 ## 快速入门 ##
 
