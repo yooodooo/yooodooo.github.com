@@ -3,6 +3,7 @@ layout: post
 title: Python dictionary
 tagline: [python] 
 group: Python
+categories: [Python]
 ---
 {% include codepiano/setup %}
 

@@ -3,6 +3,7 @@ layout: post
 title: Thrift idl描述和跨语言的web服务
 tagline: [thrift] 
 group: thrift
+categories: [rpc]
 ---
 {% include codepiano/setup %}
 

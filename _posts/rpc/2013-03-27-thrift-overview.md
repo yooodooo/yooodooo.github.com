@@ -3,6 +3,7 @@ layout: post
 title: Thrift入门
 tagline: [thrift] 
 group: thrift
+categories: [rpc]
 ---
 {% include codepiano/setup %}
 

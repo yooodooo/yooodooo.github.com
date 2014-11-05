@@ -3,6 +3,7 @@ layout: post
 title: Spring AOP Overview
 tagline: [spring] 
 group: spring
+categories: [Java]
 ---
 {% include codepiano/setup %}
 
