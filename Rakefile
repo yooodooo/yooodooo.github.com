@@ -9,7 +9,7 @@ CONFIG = {
   'themes' => File.join(SOURCE, "_includes", "themes"),
   'layouts' => File.join(SOURCE, "_layouts"),
   'posts' => File.join(SOURCE, "_posts"),
-  'post_ext' => "md",
+  'post_ext' => "html",
   'theme_package_version' => "0.1.0"
 }
 
@@ -40,17 +40,16 @@ module JB
   end #Path
 end #JB
 
-# Usage: rake post title="A Title" [date="2012-02-09"] [tags=[tag1,tag2]] [category="category"]
+# Usage: rake post title="A Title" [date="2012-02-09"] [tags=[tag1, tag2]]
 desc "Begin a new post in #{CONFIG['posts']}"
 task :post do
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
   title = ENV["title"] || "new-post"
   tags = ENV["tags"] || "[]"
-  category = ENV["category"] || ""
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   begin
     date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
-  rescue => e
+  rescue Exception => e
     puts "Error - date format must be YYYY-MM-DD, please check you typed it correctly!"
     exit -1
   end
@@ -63,12 +62,15 @@ task :post do
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: post"
+    post.puts "keywords: blog"
+    post.puts "description: blog"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
-    post.puts 'description: ""'
-    post.puts "category: \"#{category.gsub(/-/,' ')}\""
-    post.puts "tags: #{tags}"
+    post.puts "categories: [Archive]"
+    post.puts "tags: [Archive]"
+    post.puts 'group: archive'
+    post.puts 'icon: file-alt'
     post.puts "---"
-    post.puts "{% include JB/setup %}"
+    post.puts "{% include codepiano/setup %}"
   end
 end # task :post
 
@@ -90,16 +92,18 @@ task :page do
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: page"
+    post.puts "keywords: blog"
+    post.puts "description: blog"
     post.puts "title: \"#{title}\""
-    post.puts 'description: ""'
+    post.puts 'group: static'
     post.puts "---"
-    post.puts "{% include JB/setup %}"
+    post.puts "{% include codepiano/setup %}"
   end
 end # task :page
 
 desc "Launch preview environment"
 task :preview do
-  system "jekyll serve -w"
+  system "jekyll --auto --server"
 end # task :preview
 
 # Public: Alias - Maintains backwards compatability for theme switching.
@@ -110,7 +114,7 @@ namespace :theme do
   # Public: Switch from one theme to another for your blog.
   #
   # name - String, Required. name of the theme you want to switch to.
-  #        The theme must be installed into your JB framework.
+  #        The the theme must be installed into your JB framework.
   #
   # Examples
   #
@@ -142,7 +146,7 @@ namespace :theme do
           page.puts "layout: default"
           page.puts "---"
         end 
-        page.puts "{% include JB/setup %}"
+        page.puts "{% include codepiano/setup %}"
         page.puts "{% include themes/#{theme_name}/#{File.basename(filename)} %}" 
       end
     end

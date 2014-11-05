@@ -60,11 +60,6 @@
               <span class="site-author"> {{ site.author.name }} </span>
               <span class="site-title"> /* {{ site.title }} */ </span>
             </a>
-            <ul class="nav">
-              {% assign pages_list = site.pages %}
-              {% assign group = 'navigation' %}
-              {% include codepiano/navigation_list %}
-            </ul>
           </div>
           <div class="span2">
           </div>
@@ -72,7 +67,14 @@
       </div>
 
       <!-- 正文 -->
-      {{ content }}
+      <div class="row-fluid typo">
+      <div class="span2"></div>
+      <div class="span8">
+        <br />
+        {{ content }}
+      </div>
+  <div class="span2"></div>
+</div>
       
     {% include codepiano/analytics %}
   </body>
