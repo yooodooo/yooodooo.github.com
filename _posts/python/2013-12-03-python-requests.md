@@ -14,29 +14,37 @@ categories: [Python]
 ## 安装 ##
 
 有[多种](http://www.python-requests.org/en/latest/user/install/)方式安装,这里采用`setuptools`
+
 {% highlight python %}
-	git clone git://github.com/kennethreitz/requests.git
-	python setup.py install
-{% highlight python %}	
+git clone git://github.com/kennethreitz/requests.git
+python setup.py install
+{% endhighlight %}
+
 ## 快速入门 ##
 
 用Requests来创建一个HTTP请求很简单
 
-	import requests
-	r = requests.get('https://www.google.com/search?q=python')
+{% highlight python %}
+import requests
+r = requests.get('https://www.google.com/search?q=python')
+{% endhighlight %}
 
 这里创建了一个get请求，同时返回了一个`Response`对象.当然也可以传递参数的方式发送请求
 
-	queryparams = {'q':'python'}
-	r = requests.get('https://www.google.com/search', params=queryparams)
+{% highlight python %}
+queryparams = {'q':'python'}
+r = requests.get('https://www.google.com/search', params=queryparams)
+{% endhighlight %}
 
 当然对于其他的HTTP请求类型也同样支持：
 
-	r = requests.post('https://www.somesite.com/post')
-	r = requests.put('https://www.somesite.com/put')
-	r = requests.delete('https://www.somesite.com/delete')
-	r = requests.head('https://www.somesite.com/head')
-	r = requests.options('https://www.somesite.com/options')
+{% highlight python %}
+r = requests.post('https://www.somesite.com/post')
+r = requests.put('https://www.somesite.com/put')
+r = requests.delete('https://www.somesite.com/delete')
+r = requests.head('https://www.somesite.com/head')
+r = requests.options('https://www.somesite.com/options')
+{% endhighlight %}
 
 ## Response ##
 
