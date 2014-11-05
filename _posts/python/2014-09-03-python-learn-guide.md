@@ -9,7 +9,7 @@ categories: [Python]
 
 ## 变量与数据类型
 
-> 变量的声明
+1、 变量的声明
 
 作为弱类型语言，并不需要在变量声明时指定具体的类型。下面是一个声明的例子
 
@@ -36,7 +36,7 @@ categories: [Python]
     a,b,*c=[1,2,3,4,5] #c=[3,4,5]
     a,*b,c=[1,2,3,4,5] #b=[2,3,4]
 
-> bool
+2、 bool
 
 采用`True, False`表示
 
@@ -49,7 +49,7 @@ categories: [Python]
     >>> 3 > 5
     False
 
-> 布尔运算
+3、 布尔运算
 
     True and True ##True
     True and False ## False
@@ -65,14 +65,14 @@ categories: [Python]
 ## 数字与运算
 
 
-> 类型
+1、 类型
 
 - int 整数，正整数或负整数 `type(10)--> <type 'int'>`
 - long 长整数，无限大小。可以l或L结尾 `type(3452345234523452345234) --> <type 'long'>`
 - float 浮点数 `type(2.1)--><type 'float'>, type(32.3e18) --> <type 'float'>`
 - complex 复数 `type(1+2j)--><type 'complex'>`
 
-> 算术运算
+2、 算术运算
 
     7 + 2  >> 9
     7 - 2  >> 5
@@ -98,7 +98,7 @@ categories: [Python]
     7.0 // 2 >> 3.0
 
 
-> 比较、逻辑、布尔运算
+3、 比较、逻辑、布尔运算
 
 常用比较运算(`==, !=, >, <, >=, <=`)  
 布尔运算 `and, or, not`
@@ -121,13 +121,14 @@ categories: [Python]
     True
 
 这才是你希望的书写方式
-> 不存在整数溢出问题
+
+4、 不存在整数溢出问题
 
     >>>123456789870987654321122343445567678890098*123345566778999009987654333238766544
     15227847719352756287004435258757627686452840919334677759119167301324455281312L
     
 
-> 神奇的`*`
+5、 神奇的`*`
 
     >>> a = 'abc'
     >>> a*4
@@ -138,3 +139,69 @@ categories: [Python]
     >>> c = [1,2]
     >>> c*3
     [1, 2, 1, 2, 1, 2]
+
+
+## 字符串
+
+1、 申明
+
+    a0 = "Hello"
+    a1 = 'world'
+    //运算
+    a = a0 + a1
+    a*2
+    
+    //转义或doc方式
+    b = "what's your name?"
+    c = 'what\'s your name'
+    d = """what's your name?"""
+    
+    //unicode
+    >>> e = u'你好'
+    >>> e
+    u'\xc4\xe3\xba\xc3'
+
+
+2、 字符串连接
+
+    a = "my name is %s, and %d years old"%('abc',1)
+    b = "my name is %s"%'abc'
+
+3、 常用方法
+
+    a = 'Hello World'
+    len(a)
+    //大小写转换    
+    a.upper()
+    a.lower()
+    a.capitalize()
+    //下标与数量   
+    a.index('e')
+    a.count('l')
+    a.strip();
+    a.rstrip()
+
+4、 分组、切片与其他
+
+索引
+
+    name = 'Hello'
+    name[0]  --> H
+    name[-2] --> l
+    name[6]  -->IndexError
+
+切片
+
+    name[0:3] --> 'Hel'
+    name[3:]  --> 'lo'
+    name[:]   --> 'Hello'
+    name[0:3:2] --> 'Hl' 步长为2
+    name[::-1]  --> 'olleH'
+
+其他
+
+    list(name) --> ['H', 'e', 'l', 'l', 'o']返回用"".join([])
+    >>> 'a' in name
+    False
+    >>> 'a' not in name
+    True
