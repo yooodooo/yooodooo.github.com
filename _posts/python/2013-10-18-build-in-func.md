@@ -3,6 +3,7 @@ layout: post
 title: Python 内置函数
 tagline: [python] 
 group: Python
+categories: [Python]
 ---
 {% include JB/setup %}
 

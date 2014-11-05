@@ -3,6 +3,7 @@ layout: post
 title: redis commands
 tagline: [redis] 
 group: redis
+categories: [redis]
 ---
 {% include JB/setup %}
 

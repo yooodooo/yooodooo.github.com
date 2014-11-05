@@ -3,6 +3,7 @@ layout: post
 title: python 操作excel之pyExcelerator
 tagline: [python] 
 group: Python
+categories: [Python]
 ---
 {% include JB/setup %}
 

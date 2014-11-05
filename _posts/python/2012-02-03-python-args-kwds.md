@@ -3,6 +3,7 @@ layout: post
 title: Python 可变参数args与kwds
 tagline: [python] 
 group: Python
+categories: [Python]
 ---
 {% include JB/setup %}
 
