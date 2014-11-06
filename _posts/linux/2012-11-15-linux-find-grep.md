@@ -43,3 +43,18 @@ categories: [Linux]
 
 
 ## grep基本用法
+
+    grep [OPTIONS] PATTERN [FILE...]
+    
+grep是在指定的文件中找到匹配的字符，并返回所在的行。如`grep "size" anaconda-ks.cfg `在该文件中找到包含字符`size`的行,当然也支持正则匹配。
+
+## 常用的option参数
+
+- -i 不区分大小写
+- -v 反向查找
+- -n 打印出行号
+
+更多的时候和其他的命令一起使用
+
+    more install.log |grep "lib"
+    ps -ef|grep java
