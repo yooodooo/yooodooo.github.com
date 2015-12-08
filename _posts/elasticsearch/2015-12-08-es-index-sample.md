@@ -8,8 +8,8 @@ categories: [elasticsearch]
 {% include codepiano/setup %}
 
 在介绍索引之前，需要介绍下数据在Elasticsearch中的存储方式：数据是以文档的形式存储，文档本质上来讲是一个JSON对象，不同的是包括两部分：  
-- 1 元数据(metadata),用来描述文档的信息。如`_index,_type,_id,_version,_source`等
-- 2 实际存储对象的JSON格式,主要在`_source`中体现
+- 元数据(metadata),用来描述文档的信息。如`_index,_type,_id,_version,_source`等  
+- 实际存储对象的JSON格式,主要在`_source`中体现
 
 一个典型的索引文档
 
